@@ -35,6 +35,7 @@ void print(){
     printf("%d ",current->data);
     current = current->next;
   }
+  printf("\n");
 }
 
 void rem(int val){
@@ -43,7 +44,7 @@ void rem(int val){
     temp = temp->next;      
   }
   struct Node* temp2=temp->next;
-  temp->next = temp->next;
+  temp->next = temp2->next;
   free(temp2);
    
 }
