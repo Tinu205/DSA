@@ -9,7 +9,11 @@ struct Node{
 struct Node head;
 
 void insert(int val){
-  struct Node* temp = (struct Node*)malloc(sizeof)
+  struct Node* temp = (struct Node*)malloc(sizeof);
+  temp->data = val;
+  temp->next = NULL;
+
+
 }
 
 void reverse(){
