@@ -12,7 +12,11 @@ void insert(int val){
   struct Node* temp = (struct Node*)malloc(sizeof);
   temp->data = val;
   temp->next = NULL;
-
+  if(val == 1){
+    temp->next = head;
+    head = temp;
+    return;
+  } 
 
 }
 
