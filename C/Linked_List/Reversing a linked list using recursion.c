@@ -53,6 +53,6 @@ void main(){
   insert(5);
   print();
   printf("Reverse \n");
-  reverse_print();
+  //reverse_print();
   print();
 }
