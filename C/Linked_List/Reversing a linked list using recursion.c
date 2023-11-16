@@ -38,11 +38,6 @@ void reverse_print(){
     head = temp;
     return;
   }
-  reverse_print(temp->next);
-  struct Node* q;
-  q->next = temp;
-  temp->next = NULL;
-
 }
 void main(){
   head = NULL;
@@ -52,7 +47,7 @@ void main(){
   insert(4);
   insert(5);
   print();
-  printf("Reverse \n");
+  printf("\nReverse \n");
   //reverse_print();
   print();
 }
