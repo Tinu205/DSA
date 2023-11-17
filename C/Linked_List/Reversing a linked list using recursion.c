@@ -31,13 +31,15 @@ void print(){
     temp = temp->next;
   }
 }
-
-void reverse_print(){
-  struct Node* temp = head;
-  if(temp->next == NULL){
-    head = temp;
+void reverse(struct Node* p){
+  if(p->next == NULL){
+    head = p;
     return;
   }
+  reverse(p->next);
+  struct Node* temp = p->next;
+  temp->next = p;
+  p->next =  NULL;
 }
 void main(){
   head = NULL;
@@ -48,6 +50,6 @@ void main(){
   insert(5);
   print();
   printf("\nReverse \n");
-  //reverse_print();
+  reverse(head);
   print();
 }
